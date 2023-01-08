@@ -2,12 +2,12 @@
 
 First Mini Project 
 
-파일목록 | 설명 | 링크 
-------------|--------------------|-------
-blog.py | 크롤링 코드 모듈화 | https://github.com/Yeons2013/AdvertisingClassification/blob/master/blog.py
-DataGet.ipynb | blog.py 실행코드 | https://github.com/Yeons2013/AdvertisingClassification/blob/master/DataGet.ipynb
-Train.ipynb | 전처리 및 모델학습 | https://github.com/Yeons2013/AdvertisingClassification/blob/master/Train.ipynb
-nsmc_stopwords_5차.txt | 불용어 사전 | https://github.com/Yeons2013/AdvertisingClassification/blob/master/nsmc_stopwords_5%EC%B0%A8.txt
+목록 | 설명
+------------|--------------------
+[blog.py](https://github.com/Yeons2013/AdvertisingClassification/blob/master/blog.py) | 크롤링 코드 모듈화
+[DataGet.ipynb](https://github.com/Yeons2013/AdvertisingClassification/blob/master/DataGet.ipynb) | blog.py 실행코드
+[Train.ipynb](https://github.com/Yeons2013/AdvertisingClassification/blob/master/Train.ipynb) | 전처리 및 모델학습
+[nsmc_stopwords_5차.txt](https://github.com/Yeons2013/AdvertisingClassification/blob/master/nsmc_stopwords_5%EC%B0%A8.txt) | 불용어 사전
 
 
 
