@@ -3,11 +3,11 @@
 First Mini Project 
 
 파일목록 | 설명 | 링크 
-------------|------|-------
-blog.py | 크롤링 코드 모듈화 | GAN 
+------------|--------------------|-------
+blog.py | 크롤링 코드 모듈화 | https://github.com/Yeons2013/AdvertisingClassification/blob/master/blog.py
 DataGet.ipynb | blog.py 실행코드 | https://github.com/Yeons2013/AdvertisingClassification/blob/master/DataGet.ipynb
-Train.ipynb | 전처리 및 모델학습 | YOLO 
-nsmc_stopwords_5차.txt | 불용어 사전 | YOLO 
+Train.ipynb | 전처리 및 모델학습 | https://github.com/Yeons2013/AdvertisingClassification/blob/master/Train.ipynb
+nsmc_stopwords_5차.txt | 불용어 사전 | https://github.com/Yeons2013/AdvertisingClassification/blob/master/nsmc_stopwords_5%EC%B0%A8.txt
 
 
 
@@ -20,19 +20,19 @@ nsmc_stopwords_5차.txt | 불용어 사전 | YOLO
 ### 1. 프로젝트 목적
 - 많은 블로그 체험 후기글이 사실은 돈을 받고 쓴 광고글이고 이로 인해 블로그 글에 대한 신뢰성이 하락함.
 - 텍스트 마이닝과 ML을 통해 광곡글을 구분하고 블로그 글에 대한 신뢰성을 회복시키고 소비자의 현명한 소비를 도움.
-#
 
-### 2. 프로젝트 기간 및 역할
+---
+### 2. 프로젝트 기간
 - 22.07.13 ~ 22.08.04
-#
 
+---
 ### 3. 광고글과 비광고글의 경향 파악
 <img src="https://media.discordapp.net/attachments/1022477080031666276/1061545087286394950/image.png?width=1202&height=676">
 <img src="https://media.discordapp.net/attachments/1022477080031666276/1061545427243110530/image.png?width=1202&height=676">
 
 (해당 패턴을 바탕으로 수집한 데이터에 라벨링 작업 진행)
-#
 
+---
 ### 4. 데이터 수집
 
 크롤링 실행 : DataGet.ipynb
@@ -71,10 +71,9 @@ food.restaurant_get()
 <img src="https://media.discordapp.net/attachments/1022477080031666276/1061555578050195586/image.png?width=1202&height=676">
 
 
-#
 
-
-### 4. 전처리
+---
+### 5. 전처리
 + Null 값 및 중복값 확인 및 제거
 ```
 data.dropna(inplace=True)
@@ -124,9 +123,9 @@ tfidf = TfidfVectorizer(tokenizer=preprocessing, max_features=2500, min_df=25, m
 
 train_input_tfidf = tfidf.fit_transform(train_input)
 ```
-#
 
-### 5. ML 모델 학습
+---
+### 6. ML 모델 학습
 #### (1) 본문을 제외한 나머지 특성만으로 학습
 <img src="https://media.discordapp.net/attachments/1022477080031666276/1061564995063795752/image.png?width=1202&height=676">
 
@@ -168,9 +167,9 @@ RandomForestClassifier, ExtraTreesClassifier이외에 추가로 2개 더 선정
 + andomForest와 비교하였을 때 대체로 boosting이 속도가 더 빠르고 결과가 더 좋게 나옴.
 <img src="https://media.discordapp.net/attachments/1022477080031666276/1061574330611413072/image.png">
 
-#
 
-### 5. 성능 개선 시도
+---
+### 7. 성능 개선 시도
 #### (1) GridSearchCV를 활용한 Hyper-Parameter Tuning
 ※ GridSearchCV : ML에서 모델의 성능을 높이기 위한 기법 중 하나. 사용자가 직접 모델의 Hyper-Parameter 값을 리스트로 입력하면, 값에 대한 경우의 수 마다 예측 성능을 측정 평가하여 비교하면서 최적의 Hyper-Parameter 값을 찾는 과정을 진행.
 <img src="https://media.discordapp.net/attachments/1022477080031666276/1061577180393504838/image.png?width=935&height=676">
@@ -189,9 +188,9 @@ RandomForestClassifier, ExtraTreesClassifier이외에 추가로 2개 더 선정
 #### (3) 본문 이외의 특성으로 학습한 모델, 본문만으로 학습한 모델 Voting 후 Score
 <img src="https://media.discordapp.net/attachments/1022477080031666276/1061580072978489464/image.png">
 
-# 
 
-### 6. 결과 분석 및 한계점
+---
+### 8. 결과 분석 및 한계점
 **(1) 한계점**
 + 주관적으로 설정한 기준을 바탕으로 라벨링 작업을 진행했기 때문에 라벨링에 대한 신뢰성에 한계가 있음.
 + 데이터로 사용한 네이버 블로그 글의 경우 실제 후기글처럼 속인 교묘한 광고글이 많아 분류하기가 어려움.
