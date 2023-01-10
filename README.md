@@ -1,6 +1,6 @@
 # AdvertisingClassification
 
-First Mini Project 
+First Mini Project  
 
 목록 | 설명
 ------------|--------------------
